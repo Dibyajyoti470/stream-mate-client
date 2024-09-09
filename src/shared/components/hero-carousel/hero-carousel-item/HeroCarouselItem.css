@@ -8,7 +8,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  border-radius: 0.8rem;
+  border-radius: 0.6rem;
   overflow: hidden;
   opacity: 1;
 }
@@ -16,6 +16,10 @@
 .carousel-item.active {
   flex: 0 0 60%;
 }
+
+/* .carousel-item.prev {
+  flex: 0 0 3%;
+} */
 
 .carousel-item-overlay {
   top: 0;
@@ -83,6 +87,7 @@
 
 .carousel-item-details .heading {
   font-size: 22px;
+  /* font-weight: 500; */
   transition: font-size 0.9s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -163,8 +168,8 @@
   /* color: white; */
   /* color: rgb(28, 28, 28); */
   color: white;
-  background-color: rgb(241, 51, 95);
-  /* background-color: rgba(255, 255, 255, 0.6); */
+  /* background-color: rgb(241, 51, 95); */
+  background-color: rgba(255, 255, 255, 0.2);
   cursor: pointer;
   transition: min-width 0.9s, padding 0.9s, font-size 0.9s,
     background-color 0.9s;

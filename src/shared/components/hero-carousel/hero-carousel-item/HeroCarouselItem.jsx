@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import PlayIcon from "./play.svg";
 import "./HeroCarouselItem.css";
 
-export default function HeroCarouselItem({ isActive, movieDetails }) {
+export default function HeroCarouselItem({ isPrev, isActive, movieDetails }) {
   const convertMinutesToHoursAndMinutes = (totalMinutes) => {
     const hours = Math.floor(totalMinutes / 60);
     const minutes = totalMinutes % 60;
@@ -21,7 +21,9 @@ export default function HeroCarouselItem({ isActive, movieDetails }) {
       // style={{
       //   backgroundImage: `url(${movieDetails.bgPosterUrl})`,
       // }}
-      className={`carousel-item${isActive ? " active" : ""}`}
+      className={`carousel-item ${isActive ? "active" : ""} ${
+        isPrev ? "prev" : ""
+      }`}
     >
       <div className="carousel-item-content">
         <img className="carousel-bg-image" src={movieDetails.bgPosterUrl} />
@@ -57,6 +59,7 @@ export default function HeroCarouselItem({ isActive, movieDetails }) {
 }
 
 HeroCarouselItem.propTypes = {
+  isPrev: PropTypes.bool,
   isActive: PropTypes.bool.isRequired,
   movieDetails: PropTypes.object.isRequired,
 };

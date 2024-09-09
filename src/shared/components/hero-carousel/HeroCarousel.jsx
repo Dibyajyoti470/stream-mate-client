@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { movies } from "./movie-data";
 import PrevIcon from "./prev.svg";
 import NextIcon from "./next.svg";
@@ -17,14 +17,33 @@ export default function HeroCarousel() {
     setCurrentIndex(newIndex);
   };
 
+  // useEffect(() => {
+  //   if (currentIndex === movies.length - 3) {
+  //     const firstItem = movies.shift();
+  //     movies.push(firstItem);
+  //   }
+  // }, [currentIndex]);
+
   return (
     <div className="carousel-container">
       <div
         className="carousel"
         style={{
-          transform: `translateX(-${currentIndex * 20}%)`,
+          // left: `-${currentIndex * 20}%`,
+          transform: `translateX(calc(-${currentIndex * 20}% - ${
+            currentIndex * 0.8
+          }rem))`,
         }}
       >
+        {/* <HeroCarouselItem
+          key={
+            movies[currentIndex === 0 ? movies.length - 1 : currentIndex - 1].id
+          }
+          isPrev={true}
+          movieDetails={
+            movies[currentIndex === 0 ? movies.length - 1 : currentIndex - 1]
+          }
+        /> */}
         {movies.map((movie, index) => (
           <HeroCarouselItem
             key={movie.id}

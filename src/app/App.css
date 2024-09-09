@@ -1,0 +1,10 @@
+.main-app {
+  display: grid;
+  grid-template-columns: 4rem auto;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero-carousel-root {
+  padding: 0.8rem;
+}
