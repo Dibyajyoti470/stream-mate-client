@@ -1,0 +1,16 @@
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.carousel-items {
+  display: flex;
+  gap: 0.6rem;
+  height: 280px;
+}
+
+.carousel-heading {
+  color: white;
+  font-size: 20px;
+}

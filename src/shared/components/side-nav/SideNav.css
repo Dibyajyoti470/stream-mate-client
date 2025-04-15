@@ -1,12 +1,32 @@
-nav {
+.sidenav-container {
+  display: flex;
+  flex-direction: column;
+  /* gap: 1rem; */
   background-color: #0c0c0c;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+
+.logo {
+  width: 1.5rem;
+  height: auto;
+}
+
+nav {
+  /* background-color: #0c0c0c; */
 }
 
 ul {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  padding: 0.4rem;
+  padding: 0 0.4rem;
 }
 
 li {
@@ -34,7 +54,7 @@ li.active-nav::before {
   height: 1rem;
   border-top-right-radius: 0.2rem;
   border-bottom-right-radius: 0.2rem;
-  background-color: rgb(255, 53, 94);
+  background-color: #ff355e;
   top: 50%;
   left: 0;
   transform: translateY(-50%);

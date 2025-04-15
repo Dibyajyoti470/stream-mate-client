@@ -18,9 +18,6 @@ export default function HeroCarouselItem({ isPrev, isActive, movieDetails }) {
 
   return (
     <div
-      // style={{
-      //   backgroundImage: `url(${movieDetails.bgPosterUrl})`,
-      // }}
       className={`carousel-item ${isActive ? "active" : ""} ${
         isPrev ? "prev" : ""
       }`}
